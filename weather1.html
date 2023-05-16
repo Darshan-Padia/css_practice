@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css"> -->
+  <style>
+    body {
+      background-image: linear-gradient(to right, rgb(11, 152, 203), rgb(0, 255, 213));
+
+    }
+
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 3px;
+      color: white;
+      text-align: center;
+
+    }
+
+    .container {
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .box1,
+    .box2 {
+      background-color: rgb(11, 152, 203, 0.5);
+
+      width: 800px;
+      height: 450px;
+      margin: 20px;
+      /* padding: 50px; */
+      /* border: 1px solid black; */
+      display: grid;
+      border-radius: 10px;
+      grid-template-areas:
+        "combined combined"
+        "column1 column2";
+      grid-template-rows: 80px;
+    }
+    .box2m{
+      background-color: rgb(11, 152, 203, 0.5);
+
+      width: 800px;
+      height: 450px;
+      margin: 20px;
+      /* padding: 50px; */
+      /* border: 1px solid black; */
+      /* display: grid; */
+      /* display: flex; */
+      border-radius: 10px;
+
+    }
+    .flex-container{
+      display: flex;
+     
+      justify-content: space-between;
+
+      margin: auto;
+    }
+
+    .combined {
+      grid-column-end: auto;
+      /* grid-column-end:calc(); */
+    }
+
+    .container2 {
+      background-color: rgb(11, 152, 203, 0.5);
+      width: 1600px;
+      height: auto;
+      padding: 20px;
+      border-radius: 10px;
+      display: grid;
+      /* grid-template-columns: repeat(5, 1fr); */
+      grid-template-areas:
+        "mon tue wed thu fri"
+        "col1 col2 col3 col4 col5"
+        "t1 t2 t3 t4 t5";
+        /* grid-template-columns: 90px; */
+
+    }
+
+    .col1 {
+      grid-area: col1;
+      display: flex;
+      justify-content: center;
+      border-right: 1px solid;
+
+    }
+
+    .col2 {
+
+      display: flex;
+      justify-content: center;
+      grid-area: col2;
+      border-right: 1px solid;
+    }
+
+    .col3 {
+
+      display: flex;
+      justify-content: center;
+      grid-area: col3;
+      border-right: 1px solid;
+    }
+
+    .col4 {
+
+      display: flex;
+      justify-content: center;
+      grid-area: col4;
+      border-right: 1px solid;
+    }
+
+    .col5 {
+
+      display: flex;
+      justify-content: center;
+      grid-area: col5;
+      border-right: 1px solid;
+    }
+
+    .t1 {
+      grid-area: t1;
+    }
+
+    .t2 {
+      grid-area: t2;
+
+    }
+
+    .t3 {
+      grid-area: t3;
+
+    }
+
+    .t4 {
+      grid-area: t4;
+
+    }
+
+    .t5 {
+      grid-area: t5;
+    }
+
+    .mon {
+      text-align: center;
+      grid-area: mon;
+    }
+
+    .tue {
+      grid-area: tue;
+    }
+
+    .wed {
+      grid-area: wed;
+    }
+
+    .thu {
+      grid-area: thu;
+    }
+
+    .fri {
+      grid-area: fri;
+    }
+
+    .column1 {
+      /* position: relative; */
+      grid-area: column1;
+      width: 500px;
+    }
+
+    .column2 {
+      grid-area: column2;
+    }
+
+    .sun {
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+      flex-direction: column;
+      /* position: relative; */
+    }
+
+    .div3 {
+      background-color: rgb(11, 152, 203, 0.5);
+      width: 1600px;
+      height: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+
+      /* border: 1px solid black; */
+    }
+
+    .d3 {
+      margin: auto;
+      /* margin: 60px; */
+      padding: 10px;
+
+
+    }
+
+    .vertical_border {
+      border-right: 2px solid;
+      display: inline;
+    }
+
+    .combined {
+
+      grid-column-end: auto;
+      grid-area: combined;
+    }
+
+    .dotted-line {
+      border: 2px dotted;
+    }
+
+    .imgw {
+      height: 90%;
+      width: 70%;
+    }
+    .column1_{
+      align-items: left;
+    }
+    .column2_{
+      align-items: right;
+      text-align: right ;
+      align-self: right;
+      /* color: red; */
+      /* background-color: red; */
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1 grid-container">
+
+      <div class="grid-item combined">
+        <p><b>LOCAL WEATHER REPORT</b></p>
+        <hr style="width: 80%;">
+      </div>
+
+      <div class="sun grid-item column1" class="d1">
+
+        <img id='p' style="  padding-bottom: 50px;" height="50%" width="50%" src="sun.png"
+          alt="sun image">
+        <p  class="sun" ><b>14 KM/H SW</b></p>
+
+
+      </div>
+      <div class="data grid-item column2" class="d1">
+        <p style="font-size: 50px; margin-bottom: 0px;"><b>SUNDAY</b></p>
+        <p style="font-size: 30px; "><b>SUNNY</b></p>
+        <p style="font-size: 30px; padding-top: 50px;"><b>22 &deg;C</b></p>
+        <p style="font-size: 30px; "><b>71.6 &deg;`F</b></p>
+
+      </div>
+
+    </div>
+    <div class="box2m _container">
+
+      <div class="grid-item combined">
+        <p><b>SEA FORECAST REPORT</b></p>
+        <hr style="width: 80%;">
+      </div>
+
+      <div class="flex-container"> 
+
+        <div class="column1_">
+          <p style="text-align: left;padding-left: 15px;"><b>WIND SPEED</b>(KNOTS) <p></p>
+          <p style="text-align: left;padding-left: 15px;"><b>WIND SPEED</b>(KNOTS) </p>
+          <p style="text-align: left;padding-left: 15px;"><b>WIND DIRECTION</b> </p>
+          <p style="text-align: left;padding-left: 15px;"><b>WAVE</b>(M) </p>
+          <p style="text-align: left;padding-left: 15px;"><b>WAVE PERIOD</b>(S) </p>
+          <p style="text-align: left;padding-left: 15px;"><b>WAVE DIRECTION</b> </p>
+          <p style="text-align: left;padding-left: 15px;"><b>TEMPERATURE</b>(&deg;C) </p>
+          <p style="text-align: left;padding-left: 15px;"><b>CLOUD COVER</b>(%) </p>
+  
+       
+        </div>
+
+        <div  class="column2_">
+          <p style="text-align: right;padding-right: 15px;"><b>13</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>14</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>SW</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>2.2</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>12</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>SW</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>23</b></p>
+          <p style="text-align: right;padding-right: 15px;"><b>-</b></p>
+  
+        </div>
+
+      </div>
+      
+
+    </div>
+  </div>
+  <div class="container">
+    <!-- <div class="div3">
+
+      <div class="d3 monday">
+        <img style="padding-left: 100px;" class="imgw" src="partly-cloudy.png" alt="">
+      </div>
+      <hr class="vertical_border">
+      <div class="d3 tuesday">
+        <img class="imgw" src="cloudy.png" alt="">
+      </div>
+
+      <div class="d3 wednesday">
+        <img class="imgw" src="rainy.png" alt="">
+      </div>
+
+      <div class="d3 thursday">
+        <img class="imgw" src="rainy_with_thunder.png" alt="">
+      </div>
+
+      <div class="d3 friday">
+        <img class="imgw" src="snowflake.png" alt="">
+      </div>
+
+    </div> -->
+
+    <div class="container2">
+
+      <div class="mon">
+        <P><B>MONDAY</B></P>
+      </div>
+      <div class="col1">
+        <img class="imgw" src="partly-cloudy.png" alt="">
+      </div>
+      <div class="t1">
+        <P><B>22&deg;C</B></P>
+                <P><B>71.6 &deg;F </B></P>
+
+      </div>
+
+      <div class="tue">
+        <P><B>TUESDAY</B></P>
+      </div>
+      <div class="col2">
+        <img class="imgw" src="cloudy.png" alt="">
+      </div>
+      <div class="t2">
+        <P><B>22 &deg;C</B></P>
+                <P><B>71.6 &deg;F </B></P>
+
+      </div>
+
+      <div>
+        <P><B>WEDNESDAY</B></P>
+      </div>
+      <div class="col3">
+        <img class="imgw" src="rainy.png" alt="">
+      </div>
+      <div class="t3">
+        <P><B>22 &deg;C</B></P>
+                <P><B>71.6 &deg;F </B></P>
+
+      </div>
+
+      <div>
+        <P><B>THURSDAY</B></P>
+      </div>
+      <div class="col4">
+        <img class="imgw" src="rainy_with_thunder.png" alt="">
+      </div>
+      <div class="t4">
+        <P><B>22 &deg;C</B></P>
+                <P><B>71.6 &deg;F </B></P>
+
+      </div>
+
+      <div>
+        <P><B>FRIDAY
+        </B></P>
+      </div>
+      <div style="border: none;" class="col5">
+        <img class="imgw" src="snowflake.png" alt="">
+      </div>
+      <div class="t4">
+        <P><B>22 &deg;C</B></P>
+                <P><B>71.6 &deg;F </B></P>
+
+      </div>
+
+      <div class="t5">
+        <P><B>22 &deg;C</B></P>
+        <P><B>71.6 &deg;F </B></P>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div class="container2">
+    <div class="col1" >
+      <img src="partly-cloudy.png" alt="">
+    </div>
+
+    <div class="col2" >
+      <img src="cloudy.png" alt="">
+    </div>
+
+    <div class="col3" >
+      <img src="rainy.png" alt="">
+    </div>
+
+    <div class="col4" >
+      <img src="rainy_with_thunder.png" alt="">
+    </div>
+
+    <div class="col5" >
+      <img src="snowflake.png" alt="">
+    </div>
+
+  </div> -->
+
+</body>
+
+</html>
