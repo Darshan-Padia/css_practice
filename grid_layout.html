@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(156, 154, 154);
+    }
+
+    .header,
+    .content,
+    .footer {
+        border: 4px solid red;
+        border-radius: 10px;
+    }
+
+    .header {
+        display: grid;
+        height: 100px;
+        width: 1200px;
+        grid-template-areas:
+            "collab Home About Services Contact  Get_Started"
+        ;
+        grid-template-columns: 200px 100px 100px 100px 400px;
+
+    }
+
+    .collabtext {
+        background-image: linear-gradient(to right, rgb(134 31 151), rgb(232 126 7));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .collab {
+        /* background-image: linear-gradient(to right,rgb(134 31 151),#f80dcf , rgb(232 126 7));
+        background-clip: text;
+        color: transparent; */
+        display: flex;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        justify-content: center;
+        grid-area: collab;
+    }
+
+    .Home {
+        grid-area: Home;
+        display: flex;
+        align-items: center;
+    }
+
+    .About {
+        grid-area: About;
+        display: flex;
+        align-items: center;
+    }
+
+    .Services {
+        grid-area: Services;
+        display: flex;
+        align-items: center;
+    }
+
+    .Contact {
+        grid-area: Contact;
+        display: flex;
+        align-items: center;
+    }
+
+    .About {
+        grid-area: About;
+        display: flex;
+        align-items: center;
+    }
+
+    .Get_started {
+        grid-area: Get_started;
+        padding-left: 500px;
+    }
+
+    .content {
+        display: grid;
+        height: 700px;
+        width: 1200px;
+        grid-template-areas:
+            "text_content image"
+        ;
+    }
+
+    .text_content {
+        grid-area: text_content;
+    }
+
+    .image {
+        grid-area: image;
+    }
+
+    .footer {
+        display: grid;
+        height: 100px;
+        width: 1200px;
+        grid-template-areas:
+            "insta twitter youtube name"
+        ;
+        grid-template-columns: 140px 140px 140px 140px;
+    }
+
+    .insta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 30%; */
+        grid-area: insta;
+    }
+
+    .twitter {
+        grid-area: twitter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .youtube {
+        grid-area: youtube;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name {
+        grid-area: name;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .font-gradient {
+        background-image: linear-gradient(to right, rgb(134 31 151), rgb(232 126 7));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+
+<body>
+
+    <div style="border: none;" class='main'>
+
+        <div class="header">
+            <div class="collab">
+                <p style="font-size: xx-large;" class="collabtext"><b>Collab.</b></p>
+            </div>
+            <div class="Home">
+                <p><b>Home</b></p>
+            </div>
+            <div class="About">
+                <p><b>About</b></p>
+            </div>
+            <div class="Services">
+                <p><b>Services</b></p>
+            </div>
+            <div class=" Contact">
+                <p><b>Contact</b></p>
+            </div>
+            <div class="About">
+                <p><b>About </b></p>
+            </div>
+
+            <div class="Get_Started">
+                <p><button
+                        style=" color: white; width : 60%; padding: 20px; border: none; border-radius: 40px; background-image: linear-gradient(to right,rgb(134 31 151),#f80dcf , rgb(232 126 7));">
+                        <b>Get Started </b> </button></p>
+            </div>
+        </div>
+        <div class="content">
+
+            <div style="padding-top: 20%;" class="text_content">
+                <p
+                    style="color: rgb(25, 25, 25); padding-left: 10%;; font-size: xxx-large; text-align: left;margin-bottom: 10px;">
+                    <b> Collaborate Like </b></p>
+                <p
+                    style="color: rgb(36, 35, 35); padding-left: 10%;margin-top: 10px; font-size: xxx-large; text-align: left;">
+                    <b> Never Before </b></p>
+
+                <p style="line-height: 30px; padding-left: 10%;">Proin consequat eros in dolor rhoncus, in pellentesque
+                    justo feugiat. Nunc nec porttitor sapien, vel conguediam.</p>
+
+                <!-- <p style="padding-left: 10%;padding-top: 10%;"> -->
+                <div style=" display: flex ; align-items: center; justify-content: center  ;color: white;height: 7%; width : 30%;
+                      border: 1px solid rgb(179, 176, 176); border-radius: 40px; 
+                      margin-left: 10%;margin-top: 10%;">
+                    <i class="fa fa-play" style="font-size:28px;color:red; "></i>
+                    <button class="font-gradient" style="border: none;">
+                        <b> Discover Video</b> </button>
+                </div>
+
+                <!-- </p> -->
+
+            </div>
+            <div class="image font-gradient">
+                <p><img src="grid_design.webp" alt=""></p>
+            </div>
+
+
+        </div>
+        <div class="footer">
+
+            <div class="insta">
+                <i class="fa fa-instagram font-gradient" style="font-size:48px;"></i>
+            </div>
+
+            <div class="twitter">
+                <i class="fa fa-twitter font-gradient" style="font-size:48px;"></i>
+            </div>
+
+            <div class="youtube">
+                <i class="fa fa-youtube font-gradient" style="font-size:48px;"></i>
+            </div>
+
+            <div class="name">
+                <p style="text-align: center;"><b>
+                    Darshan Padia All rights reserved
+                </b></p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
