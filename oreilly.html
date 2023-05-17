@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mnu{
+            display: flex;
+            font-size: x-large;
+            justify-content: space-around;
+
+            /* padding: 10%; */
+            width:100%;
+            background-color: rgb(78, 74, 74);
+            color: white;
+            height: 50px;
+        }
+        .content{
+            height: 70%;
+            display: grid;
+            grid-template-areas: 
+            "combined combined"
+            "column1 column2";
+            
+        }
+        .combined{
+            
+            grid-area: combined;
+        }
+        .column1{
+            grid-area: column1;
+
+            display: flex;
+            justify-content: center;
+            /* heig/ht: 550px; */
+            /* width: 550px; */
+        }
+        .column2{
+            display: grid;
+            grid-template-areas: 
+            "r1"
+            "r2";
+            grid-area: column2;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* grid-template-rows: 40px; */
+        }
+        .r1{
+            grid-area: r1;
+            
+        }
+        .r2{
+            grid-area: r2;
+            height: 250px;
+        }
+        p{  
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+            text-align: center;
+            padding: 0.1%;
+        }
+        .button1{
+            background-color: orange;
+            border-radius: 10px;
+            color: white;
+            /* display: flex   ; */
+            align-content: center;
+        }
+        .footer{
+            /* padding: 10px; */
+            color: white;
+            background-color: rgb(9, 22, 70);
+        }
+        button{
+            font-size: x-large;
+            background-color: rgb(78, 74, 74);
+            color: white;
+            border: none;
+        }
+        /* #but{
+            background-color: red;
+            display: flex;
+            align-content: center ;
+            width: auto;
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="menu" style="margin-top: -30px; width: 100%;">
+        <menu class="mnu">
+            <button style="margin-left: 490px;">The book series</button>
+            <button>Testimonials</button>
+            <button>The Author</button>
+            <button style="margin-right: 490px;">Free Resources</button>
+
+        </menu>
+    </div>
+    <!--  -->
+    <div class="content">
+
+        <div class="combined" > 
+
+            <p style="font-size: xx-large; font-family: Arial, Helvetica, sans-serif;"><b>You dont know javaScript</b></p>
+
+        </div>
+
+        <div class="column1">
+            <img  style="border: 1px solid; border-radius: 10px;" src="oreilly_js.jpeg" alt="book_img">
+        </div>
+
+        <div class="column2">
+            
+            <div class="r1">
+                <div><p>Don't just drift through javascript</p></div>
+                <p>understand how javascript works</p>
+                <p style="padding-bottom: 15px;" >start your journey through bumpy side of javascript</p>
+    
+                <p><button style="width: 50%;" class="button1"> <b>ORDER YOUR COPY NOW</b></button></p>
+            </div>
+
+            <div class="r2">
+                <p></p>
+            </div>
+           
+            
+
+        </div>
+
+    </div>
+    <!--  -->
+
+    <div style="height: auto; width: auto; background-color: rgb(1, 1, 33);"
+     class = 'down'>
+        <p style="color: white; font-family: Arial, Helvetica, sans-serif; padding: 0%; padding-top: 20px;">The first e book in the book series is absolutely free</p>
+        <p style="padding: 0%; padding-top: -90px; padding-bottom: 10px;"><button style="padding: 0%; width: 50%;" class="button1"> <B> FIND OUT MORE ABOUT THIS </B> </button></p>
+    </div>
+
+    
+
+
+</body>
+</html>
